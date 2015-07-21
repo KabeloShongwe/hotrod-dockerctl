@@ -1,3 +1,5 @@
+'use strict';
+
 var request = require("supertest-as-promised");
 var _ = require('lodash');
 
@@ -84,6 +86,7 @@ RouteValidationTestHelper.prototype.validatesSortParams = function(done) {
 };
 
 function _ensureValidationError(options, done) {
+    /* jshint validthis:true */
     request(this.app)
         .get(options.path)
         .query(options.query)

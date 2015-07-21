@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('../../../config');
 var request = require('request');
 var logger = require('hotrod-logger')(__filename);

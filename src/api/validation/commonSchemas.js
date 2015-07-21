@@ -1,3 +1,5 @@
+'use strict';
+
 var Joi = require('joi');
 var Promise = require('promise');
 var _ = require('lodash');
