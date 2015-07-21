@@ -1,0 +1,7 @@
+@mixin cmp-home($brand-success, $brand-warning) {
+  .cmp-home {
+    .navbar-form .search {
+      min-width: 20em;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="col-sm-3 col-md-2 cmp-sidebar">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="section-title text-muted">Sections</li>
+        <li ng-class="{ active: sectionFromState === section }" ng-repeat="section in sections">
+            <a ui-sref="app.server-dash({ nodeName:nodeName, section:section, timepick: timepickParamsStr })" ng-switch="section">
+                {{sectionsLookup[section]}}
+            </a>
+        </li>
+    </ul>
+</div>

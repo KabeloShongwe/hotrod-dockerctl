@@ -1,0 +1,49 @@
+{
+  "name": "hotrod-dash",
+  "version": "0.0.1",
+  "homepage": "https://github.com/panoptix-za/hotrod-dash",
+  "authors": [],
+  "description": "Seed app for a hotrod-based administration tool and API",
+  "main": "src/public/index.html",
+  "keywords": [
+    "hotrod",
+    "dash"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.3.6",
+    "lodash": "~3.6",
+    "angular-ui-router": "~0.2.11",
+    "valstrap": "*",
+    "angular-bootstrap": "~0.11.2",
+    "angular": "~1.3.6",
+    "moment": "~2.10",
+    "angular-resource": "~1.3.6",
+    "filesize": "~3.1",
+    "angular-ui-select": "~0.9.6",
+    "selectize": "~0.11.2",
+    "angular-sanitize": "~1.3.6",
+    "moment-duration-format": "~1.3.0",
+    "bootstrap-sass": "~3.3.3",
+    "ionicons": "~2.0.1",
+    "angular-nvd3": "~0.1.1",
+    "hotrod-timepicker": "~0.1.2",
+    "hotrod-components": "~0.2.6",
+    "hotrod-charts": "~0.2.4"
+  },
+  "resolutions": {
+    "angular-animate": "~1.3.6",
+    "angular": "~1.3.6",
+    "d3": "3.4.13"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3"
+  }
+}

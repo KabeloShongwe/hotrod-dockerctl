@@ -1,0 +1,43 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 content">
+    <div hotrod-chart-refresh>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel">
+                    <hotrod-chart type="time" data-url="server/heapusedperc/{{nodeName}}" ></hotrod-chart>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel">
+                    <hotrod-chart type="time" data-url="server/indicesize/{{nodeName}}" ></hotrod-chart>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <hotrod-chart type="time" data-url="server/os_and_process_cpu_usage/{{nodeName}}" ></hotrod-chart>
+        </div>
+
+        <div class="panel">
+            <hotrod-chart type="time" data-url="server/osloadaverage_1m_5m_15m/{{nodeName}}" ></hotrod-chart>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel">
+                    <hotrod-chart type="time" data-url="server/osmem/{{nodeName}}" ></hotrod-chart>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel">
+                    <hotrod-chart type="time" data-url="server/processmemall/{{nodeName}}" ></hotrod-chart>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <hotrod-chart type="time" data-url="server/gctime/{{nodeName}}" ></hotrod-chart>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,44 @@
+$body-bg: rgb(231, 231, 231);
+
+$brand-primary: #313232;
+$brand-success: #6B993E;
+$brand-info: #3498DB;
+$brand-warning: #F39C12;
+$brand-danger: #E74C3C;
+$panoptix-brand-color: #FFF101;
+
+$navbar-height: 51px;
+$navbar-default-link-color: #fff;
+$navbar-default-link-hover-color: darken($navbar-default-link-color, 20%);
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%);
+$gray-dark:              #7b8a8b;
+$gray:                   #95a5a6;
+$gray-light:             #b4bcc2;
+$gray-lighter:           #ecf0f1;
+
+$dropdown-link-color: lighten($gray-base, 20%);
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $gray-dark;
+$pagination-bg:                        #fff;
+$pagination-border:                    $gray-lighter;
+
+$pagination-active-color:              #fff;
+$pagination-active-bg:                 $brand-success;
+$pagination-active-border:             $pagination-border;
+
+$pagination-hover-color:               $pagination-color;
+$pagination-hover-bg:                  $gray-lighter;
+$pagination-hover-border:              $pagination-border;
+
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               $pagination-bg;
+$pagination-disabled-border:           $pagination-border;
+
+
+@import "../themes/flatly/variables";

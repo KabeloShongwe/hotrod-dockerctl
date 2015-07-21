@@ -1,0 +1,70 @@
+<div class="col-md-12">
+
+<div class="container-fluid cmp-home content" hotrod-chart-refresh>
+    <div>
+        <div class="row">
+            <div class="panel panel-default panel-table">
+                <div class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <span class="navbar-brand">
+                            <span class="glyphicon glyphicon glyphicon-globe" aria-hidden="true"></span>
+                            Nodes
+                        </span>
+                    </div>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <div class="input-icon-left">
+                                <span class="glyphicon glyphicon-search"></span>
+                                <input id="nodeSearch" type="text" class="form-control search" placeholder="Node name"
+                                       ng-model="nodeFilter" ng-change="nodeFilterChanged(nodeFilter)">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-body">
+                    <hotrod-data options='options' get-data='getNodeData(options)' title="Nodes"
+                                 register-refresh-trigger="refreshNodesData(trigger)" page-size="5">
+                        <table class="table table-bordered panel" hotrod-sortable>
+                            <tr>
+                                <th>
+                                    <a hotrod-sort="Node">Site</a>
+                                </th>
+                                <th>
+                                    <a hotrod-sort="DiskSpacePercentage">Free Disk Space</a>
+                                </th>
+                                <th>
+                                    <a hotrod-sort="HeapUsedPercentage">Heap Used</a>
+                                </th>
+                            </tr>
+                            <tr ng-repeat="result in data.pageData">
+                                <td>
+                                    <a ui-sref="app.server-dash({ nodeName: result.Node, section:'server', timepick: timepickParamsStr })">
+                                        {{result.Node}}
+                                    </a>
+                                </td>
+                                <td>
+                                    {{result.DiskSpacePercentage | number:2}} {{result.DiskSpacePercentage ? '%' : ''}}
+                                </td>
+                                <td>
+                                   {{result.HeapUsedPercentage | number:2}} {{result.HeapUsedPercentage ? '%' : ''}}
+                                </td>
+                            </tr>
+                            <tr ng-if="data.pageData.length === 0">
+                                <td colspan="4">(No results)</td>
+                            </tr>
+                        </table>
+                        <div class="pager-wrap">
+                            <pagination total-items="data.total"
+                                        ng-model="pagingModel.currentPage" items-per-page="pagingModel.pageSize"
+                                        class="pagination-sm" ng-change="refreshData()"></pagination>
+                        </div>
+                    </hotrod-data>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
