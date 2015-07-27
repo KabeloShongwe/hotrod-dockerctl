@@ -1,6 +1,6 @@
 'use strict';
 
-var jobFactory = require('hotrod-dash-api/lib/jobs/jobFactory');
+var jobs = require('hotrod-jobs');
 var Promise = require('promise');
 var _ = require('lodash');
 var config = require('../../config');
@@ -29,7 +29,7 @@ module.exports = function() {
 
     var JOB_NAME = 'updateServerStats';
 
-    return jobFactory.createJob(JOB_NAME, function(resolve, reject, logger) {
+    return jobs.create(JOB_NAME, function(resolve, reject, logger) {
         logger.debug('Start: ' + JOB_NAME + '. Updating stats');
 
         statsService.readStats(function(err, statsArray) {
