@@ -10,7 +10,7 @@ var esHost = config.getRequired('ELASTICSEARCH');
 var cleanupLogstashIndices = require('hotrod-job-es-index-cleanup')(esHost, {
     index: 'serverstats-*',
     skip: 30,
-    action: 'close',
+    action: 'delete',
     whatIf: true
 });
 
