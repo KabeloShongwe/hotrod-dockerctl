@@ -2,7 +2,7 @@
 
 var path = require('path');
 var config = require('../config');
-var esHost = config.get('ELASTICSEARCH');
+var esHost = config.getRequired('ELASTICSEARCH');
 
 module.exports = require('hotrod-dash-data/lib/query/es/esClient')(esHost, {
     restartOnNoLivConn: config.get('RESTART_ON_NO_LIVING_CONNECTIONS'),

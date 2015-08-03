@@ -3,23 +3,16 @@
 var config = require('../../config');
 var jobs = require('hotrod-jobs');
 var moment = require('moment');
+var esClient = require('../elasticsearch');
 
 var serverUpdateIntervalSeconds = parseInt(config.getRequired('SERVER_UPDATE_INTERVAL_SECS'));
 var indexCleanupIntervalSeconds = parseInt(config.getRequired('ES_INDEX_CLEANUP_INTERVAL_SECS'));
-var esHost = config.getRequired('ELASTICSEARCH');
 
-
-var compareFunc = function(date1, date2) {
-    var d1 = moment(date1.split("serverstats-")[1],"YYYY-MM-DD");
-    var d2 = moment(date2.split("serverstats-")[1],"YYYY-MM-DD");
-    return (d1 < d2) ? -1 : (d2 > d1) ? 1 : 0;
-};
-
-var cleanupLogstashIndices = require('hotrod-job-es-index-cleanup')(esHost, {
+var cleanupLogstashIndices = require('hotrod-job-es-index-cleanup')({
+    esClient: esClient,
     index: 'serverstats-*',
-    skip: config.getRequired('ES_INDEX_CLEANUP_SPAN'),
-    indexNameCompare: compareFunc,
-    action: 'delete',
+    skip: parseInt(config.getRequired('ES_INDEX_CLEANUP_SPAN')),
+    action: 'close',
     whatIf: config.getRequired('ES_INDEX_CLEANUP_WHATIF')
 });
 
