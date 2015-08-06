@@ -4,6 +4,7 @@ var hotrodDash = require('hotrod-dash-api');
 var path = require('path');
 var logger = require('hotrod-logger')('box-dash');
 var config = require('./config');
+var bodyParser = require('body-parser');
 
 var dashApp = hotrodDash(config, function() {
     return {
@@ -17,6 +18,8 @@ var dashApp = hotrodDash(config, function() {
         }
     };
 });
+
+dashApp.use(bodyParser.json());
 
 var port = process.env.PORT || 3000;
 dashApp.listen(port);
