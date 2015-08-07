@@ -18,6 +18,7 @@ LS_INDEX_CLEANUP_WHATIF: true
 
 # EventWriter (EW)
 EVENT_WRITER_INDEX: hotrod
+EVENT_WRITER_INDEX_DATE_SUFFIX: -YYYY-MM-DD
 EVENT_WRITER_TYPE: events
 
 # Client side Angular config:

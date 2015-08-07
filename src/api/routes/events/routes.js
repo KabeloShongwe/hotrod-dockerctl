@@ -8,10 +8,11 @@ var uuid = require('node-uuid');
 var esClient = require('../../elasticsearch');
 var config = require('../../../config');
 var eventWriterIndex = config.getRequired('EVENT_WRITER_INDEX');
+var eventWriterIndexSuffix = config.get('EVENT_WRITER_INDEX_DATE_SUFFIX');
 var eventWriterType = config.get('EVENT_WRITER_TYPE');
 
 var EventWriter = require('./eventWriter');
-var eventWriter = new EventWriter(esClient, eventWriterIndex, eventWriterType);
+var eventWriter = new EventWriter(esClient, eventWriterIndex, eventWriterIndexSuffix, eventWriterType);
 
 var eventSchemas = {
     eventId: Joi.object().keys({
