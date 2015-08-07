@@ -64,6 +64,17 @@ module.exports = function(grunt) {
             }
         },
 
+        includeSource: {
+            options: {
+                basePath: '<%= webAppDir %>'
+            },
+            dev: {
+                files: {
+                    '<%= webAppDir %>/index.html': '<%= webAppDir %>/index.html'
+                }
+            }
+        },
+
         watch: {
             sass: {
                 files: ['<%= webAppDir %>/**/*.scss', '!<%= webAppDir %>/bower_components/**'],
@@ -88,5 +99,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('default', ['jshint', 'sass:dist']);
+    grunt.registerTask('default', ['includeSource', 'jshint', 'sass:dist']);
 };
