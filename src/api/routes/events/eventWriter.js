@@ -1,3 +1,5 @@
+'use strict';
+
 var logger = require('hotrod-logger')('event-writer');
 var moment = require('moment');
 
