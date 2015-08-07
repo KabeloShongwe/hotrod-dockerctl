@@ -99,5 +99,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('default', ['includeSource', 'jshint', 'sass:dist']);
+    grunt.registerTask('default', ['includeSource', 'sass:dist', 'jshint']);
 };
