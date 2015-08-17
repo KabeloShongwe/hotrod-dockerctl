@@ -4,7 +4,7 @@ var Promise = require('promise');
 var express = require('express');
 var EsQuery = require('hotrod-dash-data/lib/query/es/esQuery');
 var apiRouter = require('hotrod-dash-api/lib/apiRouter');
-var FakeConfig = require('hotrod-dash-api/tests/fakeConfig');
+var FakeConfig = require('hotrod-config/tests/fakeConfig');
 
 module.exports = {
     beforeEach: function(getRouterToTestCb, callback) {

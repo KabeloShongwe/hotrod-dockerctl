@@ -6,7 +6,7 @@ var assert = chai.assert;
 
 var moment = require('moment');
 var ms = require('ms');
-var FakeConfig = require('hotrod-dash-api/tests/fakeConfig');
+var FakeConfig = require('hotrod-config/tests/fakeConfig');
 var routeTestHelper = require('../routeTestHelper');
 var RouteValidationTestHelper = require('../routeValidationTestHelper');
 

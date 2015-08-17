@@ -2,7 +2,7 @@ var chai = require('chai');
 chai.use(require('chai-shallow-deep-equal'));
 var assert = chai.assert;
 var Joi = require('joi');
-var FakeConfig = require('hotrod-dash-api/tests/fakeConfig');
+var FakeConfig = require('hotrod-config/tests/fakeConfig');
 var validate = require('input-validator');
 
 var MAX_INTERVALS = 10;
