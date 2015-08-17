@@ -57,6 +57,15 @@
 .selectize-input input {
   color: #fff; }
 
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/lato-regular-webfont.eot");
+  src: url("../fonts/Lato/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-regular-webfont.woff") format("woff"), url("../fonts/Lato/lato-regular-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-regular-webfont.svg#Lato") format("svg"); }
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/lato-bold-webfont.eot");
+  src: url("../fonts/Lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-bold-webfont.woff") format("woff"), url("../fonts/Lato/lato-bold-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-bold-webfont.svg#Lato") format("svg");
+  font-weight: bold; }
 html, body, .full-height {
   height: 100%; }
 

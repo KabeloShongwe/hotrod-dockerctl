@@ -6,7 +6,11 @@
 @import "../../components/home/home";
 @import "../../components/sidebar/sidebar";
 @import "ui-select";
+@import "typography";
 @import "variables";
+
+@include font-face('Lato', '../fonts/Lato', 'lato-regular-webfont');
+@include font-face('Lato', '../fonts/Lato', 'lato-bold-webfont', bold);
 
 html, body, .full-height {
   height: 100%;
