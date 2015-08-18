@@ -30,10 +30,11 @@
         };
     });
 
-    module.config(function($urlRouterProvider, $stateProvider, hotrodChartsConfigProvider) {
+    module.config(function($urlRouterProvider, $stateProvider, hotrodChartsConfigProvider, config) {
 
         var testMode = location.href.indexOf('test_mode=true') !== -1;
         hotrodChartsConfigProvider.setTestMode(testMode);
+        hotrodChartsConfigProvider.setImagesDir(config.webRoot + 'images');
 
         $stateProvider
             .state('app', {

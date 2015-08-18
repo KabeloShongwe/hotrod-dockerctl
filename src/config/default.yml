@@ -37,3 +37,6 @@ API_PATH: /api
 CHART_REFRESH_SECS: 0
 TARGET_AGG_BUCKETS: 20
 MAX_AGG_BUCKETS: 250
+
+# Where the site is hosted
+WEB_ROOT: /
