@@ -33,7 +33,7 @@
     "filesize": "^2.0.4",
     "hotrod-config": "^0.1.1",
     "hotrod-dash-api": "^0.4",
-    "hotrod-dash-data": "^0.1.1",
+    "hotrod-dash-data": "^0.2",
     "hotrod-job-es-index-cleanup": "^2.0.0",
     "hotrod-jobs": "^0.1.0",
     "hotrod-logger": "^0.1.2",
