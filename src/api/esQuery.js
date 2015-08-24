@@ -31,6 +31,9 @@ function leftPad(queryNum) {
     return ('000' + queryNum).slice(-3);
 }
 function makeFileFriendlyRoute(routePath) {
+    if (!routePath) {
+        return '';
+    }
     // replacing chars from route paths like  "/foo/:bar" so we can make a valid filename
     return routePath
         .replace(/\//g, '--')
