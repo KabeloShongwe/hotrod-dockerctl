@@ -51,6 +51,28 @@ module.exports = function(config) {
             });
             customiseErrorMessage(result, 'Aggregation interval resulted in too many or too few chart columns - please try a different value');
             return result;
+        },
+        bboxSchema: function(knownBBoxes) {
+            if (!knownBBoxes) {
+                throw new Error('Must provide an array of known bboxes');
+            }
+            return Joi.object().keys({
+                bbox: Joi.string().hostname().required().concat(Joi.string().valid(knownBBoxes))
+            });
+        },
+        bbox: function(knownBBoxes) {
+            return function(rawInput, paramsSoFar) {
+                var schema = this.bboxSchema(knownBBoxes);
+                var result = Joi.validate({
+                    // Note: allowing for previously validated bbox value, else fallback to raw value
+                    bbox: paramsSoFar.bbox || rawInput.bbox
+                }, schema, {
+                    stripUnknown: true,
+                    convert: true
+                });
+                customiseErrorMessage(result, 'Invalid BBox name');
+                return result;
+            }.bind(this);
         }
     };
 };
