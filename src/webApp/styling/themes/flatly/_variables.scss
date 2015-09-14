@@ -28,14 +28,14 @@ $brand-danger:          #E74C3C !default;
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
-$text-color:            $brand-primary;
+$text-color:            $brand-primary !default;
 
 //** Global textual link color.
-$link-color:            $brand-success;
+$link-color:            $brand-success !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      $link-color;
+$link-hover-color:      $link-color !default;
 //** Link hover decoration.
-$link-hover-decoration: underline;
+$link-hover-decoration: underline !default;
 
 
 //== Typography
@@ -144,31 +144,31 @@ $table-border-color:            $gray-lighter;
 
 $btn-font-weight:                normal;
 
-$btn-default-color:              #fff;
-$btn-default-bg:                 $gray;
-$btn-default-border:             $btn-default-bg;
+$btn-default-color:              #fff !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             $btn-default-bg !default;
 
-$btn-primary-color:              $btn-default-color;
-$btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             $btn-primary-bg;
+$btn-primary-color:              $btn-default-color !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg !default;
 
-$btn-success-color:              $btn-default-color;
-$btn-success-bg:                 $brand-success;
-$btn-success-border:             $btn-success-bg;
+$btn-success-color:              $btn-default-color !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $btn-success-bg !default;
 
-$btn-info-color:                 $btn-default-color;
-$btn-info-bg:                    $brand-info;
-$btn-info-border:                $btn-info-bg;
+$btn-info-color:                 $btn-default-color !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $btn-info-bg !default;
 
-$btn-warning-color:              $btn-default-color;
-$btn-warning-bg:                 $brand-warning;
-$btn-warning-border:             $btn-warning-bg;
+$btn-warning-color:              $btn-default-color !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $btn-warning-bg !default;
 
-$btn-danger-color:               $btn-default-color;
-$btn-danger-bg:                  $brand-danger;
-$btn-danger-border:              $btn-danger-bg;
+$btn-danger-color:               $btn-default-color !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $btn-danger-bg !default;
 
-$btn-link-disabled-color:        $gray-light;
+$btn-link-disabled-color:        $gray-light !default;
 
 
 //== Forms
@@ -355,28 +355,28 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
-$navbar-default-color:             #777;
-$navbar-default-bg:                $brand-primary;
-$navbar-default-border:            transparent;
+$navbar-default-color:             #777 !default;
+$navbar-default-bg:                $brand-primary !default;
+$navbar-default-border:            transparent !default;
 
 // Navbar links
 $navbar-default-link-color:                #fff !default;
 $navbar-default-link-hover-color:          $brand-success !default;
-$navbar-default-link-hover-bg:             transparent;
-$navbar-default-link-active-color:         #fff;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 10%);
-$navbar-default-link-disabled-color:       #ccc;
-$navbar-default-link-disabled-bg:          transparent;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #fff !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 10%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
-$navbar-default-brand-hover-bg:            transparent;
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
+$navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           darken($navbar-default-bg, 10%);
-$navbar-default-toggle-icon-bar-bg:        #fff;
-$navbar-default-toggle-border-color:       darken($navbar-default-bg, 10%);
+$navbar-default-toggle-hover-bg:           darken($navbar-default-bg, 10%) !default;
+$navbar-default-toggle-icon-bar-bg:        #fff !default;
+$navbar-default-toggle-border-color:       darken($navbar-default-bg, 10%) !default;
 
 
 // Inverted navbar
@@ -411,27 +411,27 @@ $navbar-inverse-toggle-border-color:        darken($navbar-inverse-bg, 10%);
 
 //=== Shared nav styles
 $nav-link-padding:                          10px 15px;
-$nav-link-hover-bg:                         $gray-lighter;
+$nav-link-hover-bg:                         $gray-lighter !default;
 
-$nav-disabled-link-color:                   $gray-light;
-$nav-disabled-link-hover-color:             $gray-light;
+$nav-disabled-link-color:                   $gray-light !default;
+$nav-disabled-link-hover-color:             $gray-light !default;
 
 //== Tabs
-$nav-tabs-border-color:                     $gray-lighter;
+$nav-tabs-border-color:                     $gray-lighter !default;
 
-$nav-tabs-link-hover-border-color:          $gray-lighter;
+$nav-tabs-link-hover-border-color:          $gray-lighter !default;
 
-$nav-tabs-active-link-hover-bg:             $body-bg;
-$nav-tabs-active-link-hover-color:          $brand-primary;
-$nav-tabs-active-link-hover-border-color:   $gray-lighter;
+$nav-tabs-active-link-hover-bg:             $body-bg !default;
+$nav-tabs-active-link-hover-color:          $brand-primary !default;
+$nav-tabs-active-link-hover-border-color:   $gray-lighter !default;
 
-$nav-tabs-justified-link-border-color:            $gray-lighter;
-$nav-tabs-justified-active-link-border-color:     $body-bg;
+$nav-tabs-justified-link-border-color:            $gray-lighter !default;
+$nav-tabs-justified-active-link-border-color:     $body-bg !default;
 
 //== Pills
-$nav-pills-border-radius:                   $border-radius-base;
-$nav-pills-active-link-hover-bg:            $component-active-bg;
-$nav-pills-active-link-hover-color:         $component-active-color;
+$nav-pills-border-radius:                   $border-radius-base !default;
+$nav-pills-active-link-hover-bg:            $component-active-bg !default;
+$nav-pills-active-link-hover-color:         $component-active-color !default;
 
 
 //== Pagination

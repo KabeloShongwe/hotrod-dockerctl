@@ -57,6 +57,13 @@
 .selectize-input input {
   color: #fff; }
 
+.navbar-fixed-top .navbar-brand img.logo {
+  width: 23px;
+  height: 28px;
+  position: relative;
+  top: -2px;
+  margin-right: 5px; }
+
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/lato-regular-webfont.eot");
@@ -75,12 +82,7 @@ body {
 .navbar-fixed-top .navbar-brand {
   padding-top: 13px; }
   .navbar-fixed-top .navbar-brand img.logo {
-    display: inline;
-    width: 23px;
-    height: 28px;
-    position: relative;
-    top: -2px;
-    margin-right: 5px; }
+    display: inline; }
 
 .cmp-login {
   padding-top: 71px;
@@ -108,9 +110,6 @@ a {
 .navbar .glyphicon-user {
   margin-right: 5px;
   top: 2px; }
-
-.panel-default .panel-heading {
-  background-color: #DADDDE; }
 
 .btn-link.btn-status:hover, .btn-link.btn-status:focus {
   text-decoration: none; }
@@ -344,10 +343,6 @@ a {
     position: absolute;
     right: 6px;
     top: 8px; }
-  .panel-table .panel-heading {
-    background-color: #2c3e50;
-    color: #fff;
-    border-bottom: none; }
   .panel-table .panel-body {
     padding: 0; }
     .panel-table .panel-body table {
@@ -376,7 +371,7 @@ a {
       margin-bottom: 0; }
   .panel-table .navbar {
     min-height: 45px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border-radius: 3px 3px 0 0; }
     .panel-table .navbar .input-icon-left .glyphicon {
       left: 28px;
@@ -391,7 +386,7 @@ a {
     margin-top: 6px;
     margin-bottom: 6px; }
   .panel-table .form-control {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 0;
     height: 33px;
     border: none; }
@@ -404,7 +399,7 @@ a {
 .cmp-sidebar {
   height: 100%;
   background-color: #313232;
-  border-top: solid 1px #333;
+  border-top: solid 1px #313232;
   padding-left: 0;
   padding-right: 0; }
   .cmp-sidebar .section-title {
@@ -435,7 +430,7 @@ a {
     color: #fff;
     background-color: #313232;
     border-radius: 0;
-    border-top: solid 1px #333;
+    border-top: solid 1px #313232;
     border-bottom: solid 1px #111;
     border-left: solid 3px #313232; }
     .cmp-sidebar .nav-pills > li > a:hover {
@@ -465,7 +460,7 @@ a {
   top: 2px; }
 
 .navbar-fixed-top {
-  border-bottom: 1px solid #111; }
+  border-bottom: 1px solid #313232; }
 
 .nav-pills.nav-stacked.site-select > li {
   border: none; }

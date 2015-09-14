@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.navbar-fixed-top .navbar-brand img.logo {
+  width: 23px;
+  height: 28px;
+  position: relative;
+  top: -2px;
+  margin-right: 5px; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1061,7 +1068,7 @@ body {
   font-size: 15px;
   line-height: 1.42857;
   color: #313232;
-  background-color: #e7e7e7; }
+  background-color: #CBCACA; }
 
 input,
 button,
@@ -1099,7 +1106,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #e7e7e7;
+  background-color: #CBCACA;
   border: 1px solid #ecf0f1;
   border-radius: 3px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2196,7 +2203,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ecf0f1; }
   .table .table {
-    background-color: #e7e7e7; }
+    background-color: #CBCACA; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -3492,7 +3499,7 @@ tbody.collapse.in {
         border-color: #ecf0f1 #ecf0f1 #ecf0f1; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #313232;
-      background-color: #e7e7e7;
+      background-color: #CBCACA;
       border: 1px solid #ecf0f1;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3550,7 +3557,7 @@ tbody.collapse.in {
     .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus,
     .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #e7e7e7; } }
+      border-bottom-color: #CBCACA; } }
 
 .tab-content > .tab-pane {
   display: none;
@@ -4209,7 +4216,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 21px;
   line-height: 1.42857;
-  background-color: #e7e7e7;
+  background-color: #CBCACA;
   border: 1px solid #ecf0f1;
   border-radius: 3px;
   -webkit-transition: border 0.2s ease-in-out;

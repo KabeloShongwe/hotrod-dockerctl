@@ -1,4 +1,14 @@
-$body-bg: rgb(231, 231, 231);
+$body-bg: #CBCACA;
+$navbar-default-bg: #313232;
+$nav-section-border: #111;
+
+.navbar-fixed-top .navbar-brand img.logo {
+  width: 23px;
+  height: 28px;
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
 
 $brand-primary: #313232;
 $brand-success: #6B993E;
@@ -20,10 +30,8 @@ $gray-lighter:           #ecf0f1;
 
 $dropdown-link-color: lighten($gray-base, 20%);
 
-//== Pagination
-//
-//##
-
+//----------------------------------------------------------
+// Pagination
 $pagination-color:                     $gray-dark;
 $pagination-bg:                        #fff;
 $pagination-border:                    $gray-lighter;
@@ -39,6 +47,6 @@ $pagination-hover-border:              $pagination-border;
 $pagination-disabled-color:            $gray-light;
 $pagination-disabled-bg:               $pagination-bg;
 $pagination-disabled-border:           $pagination-border;
-
+//----------------------------------------------------------
 
 @import "../themes/flatly/variables";
