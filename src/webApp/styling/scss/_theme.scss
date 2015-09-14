@@ -1,3 +1,8 @@
+@import "../../bower_components/hotrod-charts/lib/styles";
+@import "../../bower_components/hotrod-timepicker/lib/timepicker";
+@import "../../components/home/home";
+@import "../../components/sidebar/sidebar";
+
 $brand-primary: #313232;
 $brand-success: #6B993E;
 $brand-info: #3498DB;
@@ -50,3 +55,10 @@ $pagination-disabled-border:           $pagination-border;
 //----------------------------------------------------------
 
 @import "../themes/flatly/variables";
+
+@include hotrod-timepicker($navbar-height, $navbar-default-bg, $text-color, $navbar-default-bg, $nav-section-border);
+@include hotrod-data-table($multisort-dir-color: $brand-success);
+
+// Note: $navbar-height + 1px so top border can be seen
+@include cmp-sidebar($navbar-default-bg, $component-active-color, $component-active-bg, $company-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
+@include cmp-home($brand-success, $brand-warning);

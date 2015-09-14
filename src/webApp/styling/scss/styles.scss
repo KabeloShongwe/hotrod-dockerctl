@@ -1,10 +1,6 @@
 @import "../../bower_components/hotrod-components/src/messages/messages";
 @import "../../bower_components/hotrod-components/src/auth/login/login";
-@import "../../bower_components/hotrod-charts/lib/styles";
-@import "../../bower_components/hotrod-timepicker/lib/timepicker";
 
-@import "../../components/home/home";
-@import "../../components/sidebar/sidebar";
 @import "ui-select";
 @import "typography";
 @import "theme";
@@ -100,13 +96,6 @@ a {
 .dropdown-settings {
   border-right: solid 1px $nav-section-border;
 }
-
-@include hotrod-timepicker($navbar-height, $navbar-default-bg, $text-color, $navbar-default-bg, $nav-section-border);
-@include hotrod-data-table($multisort-dir-color: $brand-success);
-
-// Note: $navbar-height + 1px so top border can be seen
-@include cmp-sidebar($navbar-default-bg, $component-active-color, $component-active-bg, $company-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
-@include cmp-home($brand-success, $brand-warning);
 
 .content {
   padding-top: 15px;
