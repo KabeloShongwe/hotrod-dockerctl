@@ -73,11 +73,26 @@
   src: url("../fonts/Lato/lato-bold-webfont.eot");
   src: url("../fonts/Lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-bold-webfont.woff") format("woff"), url("../fonts/Lato/lato-bold-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-bold-webfont.svg#Lato") format("svg");
   font-weight: bold; }
+html {
+  position: relative; }
+
 html, body, .full-height {
-  height: 100%; }
+  min-height: 100%; }
 
 body {
-  background-color: #CBCACA; }
+  background-color: #CBCACA;
+  margin-bottom: 22px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 5px;
+  background-color: #f5f5f5;
+  text-align: center; }
 
 .navbar-fixed-top .navbar-brand {
   padding-top: 13px; }
@@ -87,6 +102,11 @@ body {
 .cmp-login {
   padding-top: 71px;
   /* Required for bootstrap fixed-top navbar */ }
+  .cmp-login .panel-footer {
+    text-align: center;
+    color: #95a5a6; }
+    .cmp-login .panel-footer a {
+      color: #7b8a8b; }
 
 /* moz-specific fix for Bootstrap responsive tables. See Bootstrap docs http://getbootstrap.com/css/#tables */
 @-moz-document url-prefix() {

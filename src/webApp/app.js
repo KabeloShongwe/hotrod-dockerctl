@@ -37,7 +37,7 @@
         hotrodChartsConfigProvider.setImagesDir(config.webRoot + 'images');
 
         // If you want to use a custom login template, configure the path to it here:
-        // loginConfigProvider.setTemplateUrl('custom-login.html');
+        loginConfigProvider.setTemplateUrl('login.html');
 
         $stateProvider
             .state('app', {
@@ -64,12 +64,13 @@
 
     module.run(function($rootScope, messages, authConfig, authData, config, urlBuilder) {
         $rootScope.appName = config.appName;
+        $rootScope.currentStateName = null;
 
         $rootScope.$on('$stateChangeSuccess', function(event, toState){
             if (toState.name !== 'login') {
                 messages.clearErrors();
             }
-
+            $rootScope.currentStateName = toState.name;
             authConfig.expiredTokenMessage = 'Login expired. Please login again';
         });
 

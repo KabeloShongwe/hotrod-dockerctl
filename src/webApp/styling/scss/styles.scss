@@ -9,16 +9,33 @@
 @import "typography";
 @import "theme";
 
-
 @include font-face('Lato', '../fonts/Lato', 'lato-regular-webfont');
 @include font-face('Lato', '../fonts/Lato', 'lato-bold-webfont', bold);
 
-html, body, .full-height {
-  height: 100%;
+html {
+  position: relative;
 }
 
+html, body, .full-height {
+  min-height: 100%;
+}
+
+$footerHeight: 22px;
 body {
   background-color: $body-bg;
+  margin-bottom: $footerHeight;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  height: $footerHeight;
+  line-height: $footerHeight;
+  padding: 0 5px;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
 .navbar-fixed-top .navbar-brand {
@@ -31,6 +48,13 @@ body {
 
 .cmp-login {
   padding-top: $navbar-height + 20px; /* Required for bootstrap fixed-top navbar */
+  .panel-footer {
+    text-align: center;
+    color: $gray;
+    a {
+      color: $gray-dark;
+    }
+  }
 }
 
 /* moz-specific fix for Bootstrap responsive tables. See Bootstrap docs http://getbootstrap.com/css/#tables */
