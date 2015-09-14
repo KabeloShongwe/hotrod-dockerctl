@@ -35,7 +35,7 @@
     "ionicons": "~2.0.1",
     "angular-nvd3": "~0.1.1",
     "hotrod-timepicker": "~0.1.2",
-    "hotrod-components": "~0.2.6",
+    "hotrod-components": "~0.2.11",
     "hotrod-charts": "~0.2.5"
   },
   "resolutions": {

@@ -30,11 +30,14 @@
         };
     });
 
-    module.config(function($urlRouterProvider, $stateProvider, hotrodChartsConfigProvider, config) {
+    module.config(function($urlRouterProvider, $stateProvider, hotrodChartsConfigProvider, config, loginConfigProvider) {
 
         var testMode = location.href.indexOf('test_mode=true') !== -1;
         hotrodChartsConfigProvider.setTestMode(testMode);
         hotrodChartsConfigProvider.setImagesDir(config.webRoot + 'images');
+
+        // If you want to use a custom login template, configure the path to it here:
+        // loginConfigProvider.setTemplateUrl('custom-login.html');
 
         $stateProvider
             .state('app', {
