@@ -1,3 +1,5 @@
+'use strict';
+
 var es = require('hotrod-dash-data').es;
 var TraceFileSaver = require('hotrod-dash-data').TraceFileSaver;
 var esClient = require('./elasticsearch');
