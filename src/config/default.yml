@@ -1,3 +1,5 @@
+APP_NAME: Hotrod Dash
+
 # ElasticSearch
 ELASTICSEARCH: localhost:9200
 RESTART_ON_NO_LIVING_CONNECTIONS: false

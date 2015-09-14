@@ -11,6 +11,7 @@ var dashApp = hotrodDash(config, function() {
         webAppDir: path.join(__dirname, 'webApp'),
         routerOptions: require('./api/apiRouterOptions'),
         customClientConfig: {
+            appName: config.getRequired('APP_NAME'),
             chartRefreshSecs: parseInt(config.get('CHART_REFRESH_SECS') || '0'),
             targetAggBuckets: parseInt(config.get('TARGET_AGG_BUCKETS')),
             maxAggBuckets: parseInt(config.get('MAX_AGG_BUCKETS')),

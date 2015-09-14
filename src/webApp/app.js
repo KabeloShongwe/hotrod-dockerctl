@@ -60,6 +60,8 @@
     });
 
     module.run(function($rootScope, messages, authConfig, authData, config, urlBuilder) {
+        $rootScope.appName = config.appName;
+
         $rootScope.$on('$stateChangeSuccess', function(event, toState){
             if (toState.name !== 'login') {
                 messages.clearErrors();
