@@ -105,7 +105,7 @@ a {
 @include hotrod-data-table($multisort-dir-color: $brand-success);
 
 // Note: $navbar-height + 1px so top border can be seen
-@include cmp-sidebar($navbar-default-bg, $component-active-color, $component-active-bg, $panoptix-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
+@include cmp-sidebar($navbar-default-bg, $component-active-color, $component-active-bg, $company-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
 @include cmp-home($brand-success, $brand-warning);
 
 .content {

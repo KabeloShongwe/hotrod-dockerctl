@@ -1,6 +1,17 @@
+$brand-primary: #313232;
+$brand-success: #6B993E;
+$brand-info: #3498DB;
+$brand-warning: #F39C12;
+$brand-danger: #E74C3C;
+$company-brand-color: #FFF101;
+
 $body-bg: #CBCACA;
 $navbar-default-bg: #313232;
 $nav-section-border: #111;
+
+$navbar-height: 51px;
+$navbar-default-link-color: #fff;
+$navbar-default-link-hover-color: darken($navbar-default-link-color, 20%);
 
 .navbar-fixed-top .navbar-brand img.logo {
   width: 23px;
@@ -9,17 +20,6 @@ $nav-section-border: #111;
   top: -2px;
   margin-right: 5px;
 }
-
-$brand-primary: #313232;
-$brand-success: #6B993E;
-$brand-info: #3498DB;
-$brand-warning: #F39C12;
-$brand-danger: #E74C3C;
-$panoptix-brand-color: #FFF101;
-
-$navbar-height: 51px;
-$navbar-default-link-color: #fff;
-$navbar-default-link-hover-color: darken($navbar-default-link-color, 20%);
 
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%);
