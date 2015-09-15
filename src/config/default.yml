@@ -48,3 +48,4 @@ MAX_AGG_BUCKETS: 250
 
 # Where the site is hosted
 WEB_ROOT: /
+GIT_CONFIG_DIR: /opt/hotrod/config
