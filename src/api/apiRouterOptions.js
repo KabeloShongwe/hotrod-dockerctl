@@ -17,8 +17,9 @@ module.exports = {
         // Unauthenticated routes go here
 
         // Require valid JWT token for all routes below here
-        apiRouter.use(authMiddleware);
-
+        if (!config.get('DISABLE_AUTH')) {
+            apiRouter.use(authMiddleware);
+        }
         // Authenticated routes:
         _.each(routersByDirName, function(routerX) {
             apiRouter.use(API_VER, routerX);
