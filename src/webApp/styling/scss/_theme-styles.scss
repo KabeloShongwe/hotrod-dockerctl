@@ -5,6 +5,20 @@
 @import "../../components/home/home";
 @import "../../components/sidebar/sidebar";
 
+.cmp-login {
+  .logo-wrap {
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: -3px;
+  }
+  form {
+    margin-bottom: 12px;
+    .form-group.password {
+      margin-bottom: 25px;
+    }
+  }
+}
+
 .navbar-fixed-top .navbar-brand img.logo {
   width: 23px;
   height: 28px;
