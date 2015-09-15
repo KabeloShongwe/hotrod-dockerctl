@@ -2,7 +2,7 @@
 
 var Promise = require('promise');
 var express = require('express');
-var EsQuery = require('hotrod-dash-data/lib/query/es/esQuery');
+var EsQuery = require('hotrod-dash-data').es.Query;
 var apiRouter = require('hotrod-dash-api/lib/apiRouter');
 var FakeConfig = require('hotrod-config/tests/fakeConfig');
 

@@ -21,6 +21,16 @@
 .cmp-login form {
   margin: 0 15px; }
 
+.select2 > .select2-choice.ui-select-match {
+  /* Because of the inclusion of Bootstrap */
+  height: 29px; }
+
+.selectize-control > .selectize-dropdown {
+  top: 36px; }
+
+.selectize-input input {
+  color: #fff; }
+
 .panel-table .hotrod-data .graph-loading {
   top: inherit;
   right: inherit;
@@ -47,82 +57,21 @@
   top: -7px;
   padding: 5px; }
 
-.select2 > .select2-choice.ui-select-match {
-  /* Because of the inclusion of Bootstrap */
-  height: 29px; }
+.cmp-login .logo-wrap {
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: -3px; }
+.cmp-login form {
+  margin-bottom: 12px; }
+  .cmp-login form .form-group.password {
+    margin-bottom: 25px; }
 
-.selectize-control > .selectize-dropdown {
-  top: 36px; }
-
-.selectize-input input {
-  color: #fff; }
-
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/lato-regular-webfont.eot");
-  src: url("../fonts/Lato/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-regular-webfont.woff") format("woff"), url("../fonts/Lato/lato-regular-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-regular-webfont.svg#Lato") format("svg"); }
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/lato-bold-webfont.eot");
-  src: url("../fonts/Lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-bold-webfont.woff") format("woff"), url("../fonts/Lato/lato-bold-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-bold-webfont.svg#Lato") format("svg");
-  font-weight: bold; }
-html, body, .full-height {
-  height: 100%; }
-
-body {
-  background-color: #CBCACA; }
-
-.navbar-fixed-top .navbar-brand {
-  padding-top: 13px; }
-  .navbar-fixed-top .navbar-brand img.logo {
-    display: inline;
-    width: 23px;
-    height: 28px;
-    position: relative;
-    top: -2px;
-    margin-right: 5px; }
-
-.cmp-login {
-  padding-top: 71px;
-  /* Required for bootstrap fixed-top navbar */ }
-
-/* moz-specific fix for Bootstrap responsive tables. See Bootstrap docs http://getbootstrap.com/css/#tables */
-@-moz-document url-prefix() {
-  fieldset {
-    display: table-cell; } }
-a {
-  cursor: pointer; }
-
-.modal-backdrop {
-  /* Not sure why this has to be added*/
-  bottom: 0; }
-
-.modal-dialog {
-  margin-top: 80px; }
-
-.navbar-btn {
-  padding: 6px 12px;
-  margin-top: 7.5px;
-  margin-bottom: 7.5px; }
-
-.navbar .glyphicon-user {
-  margin-right: 5px;
-  top: 2px; }
-
-.panel-default .panel-heading {
-  background-color: #DADDDE; }
-
-.btn-link.btn-status:hover, .btn-link.btn-status:focus {
-  text-decoration: none; }
-
-.navbar-default .btn-link.btn-status-online {
-  color: #6B993E; }
-
-.navbar-default .btn-link.btn-status-offline {
-  color: #F39C12; }
-
-.dropdown-settings {
-  border-right: solid 1px #111; }
+.navbar-fixed-top .navbar-brand img.logo {
+  width: 23px;
+  height: 28px;
+  position: relative;
+  top: -2px;
+  margin-right: 5px; }
 
 .kbn-timepicker-wrap .kbn-timepicker.panel {
   padding-top: 51px;
@@ -344,10 +293,6 @@ a {
     position: absolute;
     right: 6px;
     top: 8px; }
-  .panel-table .panel-heading {
-    background-color: #2c3e50;
-    color: #fff;
-    border-bottom: none; }
   .panel-table .panel-body {
     padding: 0; }
     .panel-table .panel-body table {
@@ -376,7 +321,7 @@ a {
       margin-bottom: 0; }
   .panel-table .navbar {
     min-height: 45px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border-radius: 3px 3px 0 0; }
     .panel-table .navbar .input-icon-left .glyphicon {
       left: 28px;
@@ -391,7 +336,7 @@ a {
     margin-top: 6px;
     margin-bottom: 6px; }
   .panel-table .form-control {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 0;
     height: 33px;
     border: none; }
@@ -404,7 +349,7 @@ a {
 .cmp-sidebar {
   height: 100%;
   background-color: #313232;
-  border-top: solid 1px #333;
+  border-top: solid 1px #313232;
   padding-left: 0;
   padding-right: 0; }
   .cmp-sidebar .section-title {
@@ -435,7 +380,7 @@ a {
     color: #fff;
     background-color: #313232;
     border-radius: 0;
-    border-top: solid 1px #333;
+    border-top: solid 1px #313232;
     border-bottom: solid 1px #111;
     border-left: solid 3px #313232; }
     .cmp-sidebar .nav-pills > li > a:hover {
@@ -452,6 +397,85 @@ a {
 .cmp-home .navbar-form .search {
   min-width: 20em; }
 
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/lato-regular-webfont.eot");
+  src: url("../fonts/Lato/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-regular-webfont.woff") format("woff"), url("../fonts/Lato/lato-regular-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-regular-webfont.svg#Lato") format("svg"); }
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/lato-bold-webfont.eot");
+  src: url("../fonts/Lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/lato-bold-webfont.woff") format("woff"), url("../fonts/Lato/lato-bold-webfont.ttf") format("truetype"), url("../fonts/Lato/lato-bold-webfont.svg#Lato") format("svg");
+  font-weight: bold; }
+html {
+  position: relative; }
+
+html, body, .full-height {
+  min-height: 100%; }
+
+body {
+  background-color: #CBCACA;
+  margin-bottom: 22px; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 5px;
+  background-color: #f5f5f5;
+  text-align: center; }
+
+.navbar-fixed-top .navbar-brand {
+  padding-top: 13px; }
+  .navbar-fixed-top .navbar-brand img.logo {
+    display: inline; }
+
+.cmp-login {
+  padding-top: 71px;
+  /* Required for bootstrap fixed-top navbar */ }
+  .cmp-login .panel-footer {
+    text-align: center;
+    color: #95a5a6; }
+    .cmp-login .panel-footer a {
+      color: #7b8a8b; }
+
+/* moz-specific fix for Bootstrap responsive tables. See Bootstrap docs http://getbootstrap.com/css/#tables */
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell; } }
+a {
+  cursor: pointer; }
+
+.modal-backdrop {
+  /* Not sure why this has to be added*/
+  bottom: 0; }
+
+.modal-dialog {
+  margin-top: 80px; }
+
+.navbar-btn {
+  padding: 6px 12px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px; }
+
+.navbar .glyphicon-user {
+  margin-right: 5px;
+  top: 2px; }
+
+.btn-link.btn-status:hover, .btn-link.btn-status:focus {
+  text-decoration: none; }
+
+.navbar-default .btn-link.btn-status-online {
+  color: #6B993E; }
+
+.navbar-default .btn-link.btn-status-offline {
+  color: #F39C12; }
+
+.dropdown-settings {
+  border-right: solid 1px #111; }
+
 .content {
   padding-top: 15px; }
 
@@ -465,7 +489,7 @@ a {
   top: 2px; }
 
 .navbar-fixed-top {
-  border-bottom: 1px solid #111; }
+  border-bottom: 1px solid #313232; }
 
 .nav-pills.nav-stacked.site-select > li {
   border: none; }

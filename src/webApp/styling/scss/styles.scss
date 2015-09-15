@@ -1,39 +1,57 @@
 @import "../../bower_components/hotrod-components/src/messages/messages";
 @import "../../bower_components/hotrod-components/src/auth/login/login";
-@import "../../bower_components/hotrod-charts/lib/styles";
-@import "../../bower_components/hotrod-timepicker/lib/timepicker";
 
-@import "../../components/home/home";
-@import "../../components/sidebar/sidebar";
 @import "ui-select";
 @import "typography";
-@import "variables";
+@import "theme-styles";
 
 @include font-face('Lato', '../fonts/Lato', 'lato-regular-webfont');
 @include font-face('Lato', '../fonts/Lato', 'lato-bold-webfont', bold);
 
-html, body, .full-height {
-  height: 100%;
+html {
+  position: relative;
 }
 
+html, body, .full-height {
+  min-height: 100%;
+}
+
+$footerHeight: 22px;
 body {
-  background-color: #CBCACA;
+  background-color: $body-bg;
+  margin-bottom: $footerHeight;
+}
+
+.footer {
+  // position: absolute;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  height: $footerHeight;
+  line-height: $footerHeight;
+  padding: 0 5px;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
 .navbar-fixed-top .navbar-brand {
   padding-top: 13px;
   img.logo {
     display: inline;
-    width: 23px;
-    height: 28px;
-    position: relative;
-    top: -2px;
-    margin-right: 5px;
+    // The rest of the logo styles are defined in _theme.scss
   }
 }
 
 .cmp-login {
   padding-top: $navbar-height + 20px; /* Required for bootstrap fixed-top navbar */
+  .panel-footer {
+    text-align: center;
+    color: $gray;
+    a {
+      color: $gray-dark;
+    }
+  }
 }
 
 /* moz-specific fix for Bootstrap responsive tables. See Bootstrap docs http://getbootstrap.com/css/#tables */
@@ -64,10 +82,6 @@ a {
   top: 2px;
 }
 
-.panel-default .panel-heading {
-  background-color: #DADDDE;
-}
-
 .btn-link.btn-status {
   &:hover, &:focus {
     text-decoration: none;
@@ -80,18 +94,9 @@ a {
   color: $brand-warning;
 }
 
-$border-top-color: #333;
-$border-bottom-color: #111;
-
 .dropdown-settings {
-  border-right: solid 1px $border-bottom-color;
+  border-right: solid 1px $nav-section-border;
 }
-
-@include hotrod-timepicker($navbar-height, $navbar-default-bg, $text-color, $border-top-color, $border-bottom-color);
-@include hotrod-data-table($brand-success);
-// Note: $navbar-height + 1px so top border can be seen
-@include cmp-sidebar($navbar-default-bg, $component-active-color, $component-active-bg, $panoptix-brand-color, $navbar-height + 1px, $screen-sm, $border-top-color, $border-bottom-color);
-@include cmp-home($brand-success, $brand-warning);
 
 .content {
   padding-top: 15px;
@@ -110,7 +115,7 @@ $border-bottom-color: #111;
 }
 
 .navbar-fixed-top {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid $navbar-default-bg;
 }
 
 // Specific style for site-select li

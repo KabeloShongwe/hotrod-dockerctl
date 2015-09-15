@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hotrod Dash</title>
+    <title ng-bind="appName"></title>
     <meta name="description" content="Hotrod dashboards">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,6 +27,10 @@
 <![endif]-->
 
 <div ui-view class="full-height"></div>
+
+<div class="footer" ng-hide="currentStateName === 'login'">
+    Powered by <a href="https://github.com/panoptix-za/HotRod">Hotrod</a> from <a href="http://www.panoptix.co.za/">Panoptix</a>
+</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
@@ -55,9 +59,11 @@
 <script src="bower_components/hotrod-components/src/filters.js"></script>
 <script src="bower_components/hotrod-components/src/urlUtils.js"></script>
 <script src="bower_components/hotrod-components/src/messages/messages.js"></script>
+<script src="bower_components/hotrod-components/src/auth/login/loginConfig.js"></script>
 <script src="bower_components/hotrod-components/src/auth/login/login.js"></script>
 <script src="bower_components/hotrod-components/src/auth/authService.js"></script>
 <script src="bower_components/hotrod-components/src/auth/auth.js"></script>
+<script src="bower_components/jwt-decode/build/jwt-decode.min.js"></script>
 
 <!-- AUTO-GENERATED: Run `grunt includeSource` or just `grunt` to update the included componenets/ scripts -->
 <!-- include: "type": "js", "files": "components/**/*.js" -->

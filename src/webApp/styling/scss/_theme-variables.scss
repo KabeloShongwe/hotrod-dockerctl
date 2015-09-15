@@ -1,11 +1,13 @@
-$body-bg: rgb(231, 231, 231);
-
 $brand-primary: #313232;
 $brand-success: #6B993E;
 $brand-info: #3498DB;
 $brand-warning: #F39C12;
 $brand-danger: #E74C3C;
-$panoptix-brand-color: #FFF101;
+$company-brand-color: #FFF101;
+
+$body-bg: #CBCACA;
+$navbar-default-bg: #313232;
+$nav-section-border: #111;
 
 $navbar-height: 51px;
 $navbar-default-link-color: #fff;
@@ -20,10 +22,8 @@ $gray-lighter:           #ecf0f1;
 
 $dropdown-link-color: lighten($gray-base, 20%);
 
-//== Pagination
-//
-//##
-
+//----------------------------------------------------------
+// Pagination
 $pagination-color:                     $gray-dark;
 $pagination-bg:                        #fff;
 $pagination-border:                    $gray-lighter;
@@ -39,6 +39,6 @@ $pagination-hover-border:              $pagination-border;
 $pagination-disabled-color:            $gray-light;
 $pagination-disabled-bg:               $pagination-bg;
 $pagination-disabled-border:           $pagination-border;
-
+//----------------------------------------------------------
 
 @import "../themes/flatly/variables";

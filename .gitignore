@@ -5,3 +5,4 @@ src/config/local*.yml
 .DS_Store
 /.idea
 /.sass-cache
+/.queries
