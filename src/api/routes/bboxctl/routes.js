@@ -7,11 +7,8 @@ var SaltService = require('./saltService');
 var validate = require('input-validator');
 var async = require('async');
 var sitesStore = require('../../stores/sitesStore');
-
-// TODO: Make a config value?
-var DOCKER_CONTAINER = 'bboxdev_extsaltmaster_1';
-
-var saltSvc = new SaltService(DOCKER_CONTAINER);
+var config = require('../../../config');
+var saltSvc = new SaltService(config.getRequired('DOCKER_CONTAINER'));
 
 module.exports = function(services) {
     var schemas = require('../../validation/commonSchemas')(services.config);

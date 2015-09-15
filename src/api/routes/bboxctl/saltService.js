@@ -56,7 +56,8 @@ SaltService.prototype.exec = function(/* arg1, ..., argN */) {
                         var content = JSON.parse(returned);
                         resolve(content);
                     } catch (err) {
-                        logger.error('Error parsing response:', err);
+                        //FIXME: Ignore parsing errors until we figure out what the stream issue is
+                        logger.trace('Error parsing response:', err);
                         reject(err);
                     }
                 });
