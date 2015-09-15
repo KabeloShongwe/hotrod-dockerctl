@@ -61,47 +61,36 @@ module.exports = function(services) {
         }).then(res.json.bind(res), next);
     });
 
-    // TODO: Finish the rest...
-
     //Trigger a configuration run on a specific (or list of) minions
     //Command: salt -L minion1,minion2 state.highstate --out=json
-    //
-    //router.post('/salt/triggerHighstate/:bbox', function (req, res, next) {
-    //    //Construct a 'target' consisting of online BBoxes
-    //
-    //    //See command in comment
-    //
-    //});
+    router.post('/salt/minion/:bbox/triggerHighstate', function (req, res, next) {
+        validateBBoxParams(function(knownBBoxes) {
+            return validate(req.params, schemas.bbox(knownBBoxes));
+        }).then(function(params) {
+            return saltSvc.exec('salt', '-L', params.bbox, 'state.highstate', '--out=json');
+        }).then(res.json.bind(res), next);
+    });
+
 
     //Check if a highstate is currently running (on online minion(s))
     //Command: salt -L minion1,minion2 file.file_exists /tmp/highstate_running
-    //
-    //router.get('/salt/isHighstateRunning', function (req, res, next) {
-    //    //Construct a 'target' consisting of online BBoxes
-    //
-    //    //See command in comment
-    //
-    //});
+    router.get('/salt/minion/:bbox/isRunningHighstate', function (req, res, next) {
+        validateBBoxParams(function(knownBBoxes) {
+            return validate(req.params, schemas.bbox(knownBBoxes));
+        }).then(function(params) {
+            return saltSvc.exec('salt', '-L', params.bbox, 'file.file_exists', '/tmp/highstate_running', '--out=json');
+        }).then(res.json.bind(res), next);
+    });
 
     //Check if a minion needs a reboot (on online minion(s))
     //Command: salt -L minion1,minion2 file.file_exists /tmp/reboot_required
-    //
-    //router.get('/salt/rebootRequired', function (req, res, next) {
-    //    //Construct a 'target' consisting of online BBoxes
-    //
-    //    //See command in comment
-    //
-    //});
-
-    //Check if a minion needs a reboot (on online minion(s))
-    //Command: salt -L minion1,minion2 file.file_exists /tmp/reboot_required
-    //
-    //router.get('/salt/rebootRequired', function (req, res, next) {
-    //    //Construct a 'target' consisting of online BBoxes
-    //
-    //    //See command in comment
-    //
-    //});
+    router.get('/salt/minion/:bbox/requiresReboot', function (req, res, next) {
+        validateBBoxParams(function(knownBBoxes) {
+            return validate(req.params, schemas.bbox(knownBBoxes));
+        }).then(function(params) {
+            return saltSvc.exec('salt', '-L', params.bbox, 'file.file_exists', '/tmp/reboot_required', '--out=json');
+        }).then(res.json.bind(res), next);
+    });
 
     function validateBBoxParams(validateCB) {
         return new Promise(function(resolve, reject) {
