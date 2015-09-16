@@ -24,7 +24,7 @@ module.exports = function(services) {
     // List of current online minions, this list can be used for some of the functions below to make it more responsive
     // Should be used in the "logstash crashed" alert to see if any minions are online
     router.get('/salt/minions/online-status', function(req, res, next) {
-        saltSvc.exec('salt-run', 'manage.status', '--out=json', '--no-color')
+        saltSvc.exec('salt-run', '--timeout=30','manage.status', '--out=json', '--no-color')
             .then(res.json.bind(res), next);
     });
 
@@ -60,7 +60,7 @@ module.exports = function(services) {
 
     //Trigger a configuration run on a specific (or list of) minions
     //Command: salt -L minion1,minion2 state.highstate --out=json
-    router.post('/salt/minion/:bbox/triggerHighstate', function (req, res, next) {
+    router.post('/salt/minion/:bbox/trigger-highstate', function (req, res, next) {
         validateBBoxParams(function(knownBBoxes) {
             return validate(req.params, schemas.bbox(knownBBoxes));
         }).then(function(params) {
@@ -71,7 +71,7 @@ module.exports = function(services) {
 
     //Check if a highstate is currently running (on online minion(s))
     //Command: salt -L minion1,minion2 file.file_exists /tmp/highstate_running
-    router.get('/salt/minion/:bbox/isRunningHighstate', function (req, res, next) {
+    router.get('/salt/minion/:bbox/highstate-running', function (req, res, next) {
         validateBBoxParams(function(knownBBoxes) {
             return validate(req.params, schemas.bbox(knownBBoxes));
         }).then(function(params) {
@@ -81,7 +81,7 @@ module.exports = function(services) {
 
     //Check if a minion needs a reboot (on online minion(s))
     //Command: salt -L minion1,minion2 file.file_exists /tmp/reboot_required
-    router.get('/salt/minion/:bbox/requiresReboot', function (req, res, next) {
+    router.get('/salt/minion/:bbox/reboot-required', function (req, res, next) {
         validateBBoxParams(function(knownBBoxes) {
             return validate(req.params, schemas.bbox(knownBBoxes));
         }).then(function(params) {
