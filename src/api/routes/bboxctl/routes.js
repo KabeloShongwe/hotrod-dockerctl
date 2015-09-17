@@ -9,6 +9,7 @@ var async = require('async');
 var sitesStore = require('../../stores/sitesStore');
 var config = require('../../../config');
 var saltSvc = new SaltService(config.getRequired('DOCKER_CONTAINER'));
+var Promise = require('promise');
 
 module.exports = function(services) {
     var schemas = require('../../validation/commonSchemas')(services.config);
