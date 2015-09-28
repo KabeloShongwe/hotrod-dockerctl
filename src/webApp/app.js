@@ -14,6 +14,7 @@
         'filters',
         'wrappers',
         'auth',
+        'dash.auth',
         'server',
         'timepicker',
         'status',
