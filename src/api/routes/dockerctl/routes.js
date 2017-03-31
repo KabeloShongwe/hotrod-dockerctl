@@ -169,5 +169,47 @@ module.exports = function (services) {
 
     });
 
+    router.get('/filesize/:container', function (req, res) {
+
+        let containerName = req.params.container;
+                                                                                              
+        resolveContainerName(containerName)
+            .then(function (resolvedContainerName) {
+
+                let container = docker.getContainer(resolvedContainerName);
+                let options = {
+                    Cmd: ['/bin/bash', '-c', 'du -b /var/log/salt/master | cut -f1'],
+                    AttachStdout: true,
+                    AttachStderr: true,
+                    Tty: false
+                };
+
+                container.exec(options, function(err, exec) {
+                    if (err) return;
+                    exec.start(function(err, stream) {
+                        if (err) return;
+
+                        //res.set('Content-Type', 'application/vnd.docker.raw-stream');
+                        res.set('Content-Type', 'application/json');
+
+                        stream.on('data', function (data) {
+                            res.send(data);
+                        });
+
+                        stream.once('end', function () {
+                            logger.trace("stream end");
+                            res.end();
+                        });
+                        container.modem.demuxStream(stream, process.stdout, process.stderr);
+                    });
+                });
+            })
+            .catch(function (error) {
+                console.log("Failed!", error);
+                res.status(404);
+                res.send('Error: ' + error);
+            });
+    });
+
     return router;
 };
