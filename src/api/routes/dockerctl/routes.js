@@ -169,16 +169,17 @@ module.exports = function (services) {
 
     });
 
-    router.get('/filesize/:container', function (req, res) {
+    router.get('/:container/filepath/*', function (req, res) {
 
         let containerName = req.params.container;
+        let filepath = req.params[0];
                                                                                               
         resolveContainerName(containerName)
             .then(function (resolvedContainerName) {
 
                 let container = docker.getContainer(resolvedContainerName);
                 let options = {
-                    Cmd: ['/bin/bash', '-c', 'du -b /var/log/salt/master | cut -f1'],
+                    Cmd: ['/bin/bash', '-c', 'du -b '+ filepath +' | cut -f1'],
                     AttachStdout: true,
                     AttachStderr: true,
                     Tty: false
@@ -189,7 +190,6 @@ module.exports = function (services) {
                     exec.start(function(err, stream) {
                         if (err) return;
 
-                        //res.set('Content-Type', 'application/vnd.docker.raw-stream');
                         res.set('Content-Type', 'application/json');
 
                         stream.on('data', function (data) {
