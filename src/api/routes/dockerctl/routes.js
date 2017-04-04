@@ -169,7 +169,7 @@ module.exports = function (services) {
 
     });
 
-    router.get('/:container/filepath/*', function (req, res) {
+    router.get('/filesize/:container/*', function (req, res) {
 
         let containerName = req.params.container;
         let filepath = req.params[0];
