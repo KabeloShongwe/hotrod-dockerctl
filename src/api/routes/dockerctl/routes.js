@@ -193,15 +193,17 @@ module.exports = function (services) {
                         res.set('Content-Type', 'application/json');
 
                         stream.on('data', function (data) {
-                            let results = data.toString();
-                            res.send(results.replace(/\s/g, ''));
+                            let numberPattern = /\d+/g;
+                            let result = data.toString().match(numberPattern)[0];
+                            res.send(result);
+                            console.log(result);
                         });
 
                         stream.once('end', function () {
                             logger.trace("stream end");
                             res.end();
                         });
-                        container.modem.demuxStream(stream, process.stdout, process.stderr);
+                        container.modem.demuxStream(stream, process.stderr);
                     });
                 });
             })
