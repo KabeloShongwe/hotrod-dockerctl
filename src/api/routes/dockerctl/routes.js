@@ -193,7 +193,8 @@ module.exports = function (services) {
                         res.set('Content-Type', 'application/json');
 
                         stream.on('data', function (data) {
-                            res.send(data);
+                            let results = data.toString();
+                            res.send(results.replace(/\s/g, ''));
                         });
 
                         stream.once('end', function () {
